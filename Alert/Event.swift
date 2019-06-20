@@ -30,7 +30,7 @@ class Event {
         self.picture = picture ?? UIImage(named: "Gradient.png")!
     }
     
-    func calcNewDate(){
+    func calcNewDate(){ //calculates the new alert date for the event
         
     }
 }
