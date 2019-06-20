@@ -31,6 +31,6 @@ class Event {
     }
     
     func calcNewDate(){ //calculates the new alert date for the event
-        
+        //test
     }
 }
