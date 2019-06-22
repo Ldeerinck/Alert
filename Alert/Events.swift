@@ -9,15 +9,16 @@
 import Foundation
 
 func sort() {
-    
+    events = events.sorted {$0.timeUntil < $1.timeUntil}
 }
 
 func addItem(event: Event) {
-    
+    events.append(event)
+    sort()
 }
 
-func deleteItem() {
-    
+func deleteItem(index: Int) {
+    events.remove(at: index)
 }
 
 func updateItem() {
