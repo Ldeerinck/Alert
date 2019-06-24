@@ -18,7 +18,6 @@ class Event {
     var description:String
     var date:Date
     var type:RecurrenceType
-    var index:Int
     var repDays:Int?
     var repMonths:Int?
     var repYears:Int?
@@ -27,24 +26,16 @@ class Event {
         return (date.timeIntervalSinceNow / (60*60*24)).rounded(.up)
     }
     
-    init(description: String, date: Date, type: RecurrenceType, days:Int?, months:Int?, index: Int, picture: UIImage?) {
+    init(description: String, date: Date, type: RecurrenceType, days:Int?, months:Int?, picture: UIImage?) {
         self.description = description
         self.date = date
         self.type = type
         self.repDays = days
         self.repMonths = months
         self.picture = picture ?? UIImage(named: "Gradient.png")!
-        self.index = index
     }
     
     func calcNewDate() { //calculates the new alert date for the event
-        switch type {
-        case .oneTime:
-            deleteItem(index: self.index)
-        case .repeatDays:
-            date = Date(timeIntervalSinceNow: Double(repDays!*(60*60*24)))
-        default:
-            return
-        }
+        
     }
 }
