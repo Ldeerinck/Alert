@@ -8,31 +8,33 @@
 
 import Foundation
 
-func sort() {
-    events = events.sorted {$0.timeUntil < $1.timeUntil}
-}
+class Events {
+    func sort() {
+        events = events.sorted {$0.timeUntil < $1.timeUntil}
+    }
 
-func addItem(event: Event) {
-    events.append(event)
-    sort()
-}
+    func addItem(event: Event) {
+        events.append(event)
+        sort()
+    }
 
-func deleteItem(index: Int) {
-    events.remove(at: index)
-}
+    func deleteItem(index: Int) {
+        events.remove(at: index)
+    }
 
-func updateItem() {
-    
-}
+    func updateItem() {
+        
+    }
 
-func export() {
-    
-}
+    func export() {
+        
+    }
 
-func readFromFile() {
-    
-}
+    func readFromFile() {
+        
+    }
 
-func writeToFile() {
-    
+    func writeToFile() {
+        
+    }
 }
